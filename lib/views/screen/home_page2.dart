@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pms_v2_team/views/screen/design_screen.dart';
+import 'package:flutter_pms_v2_team/views/widgets/home_page2_widget.dart';
 import 'package:flutter_pms_v2_team/views/widgets/segmented_control%20button.dart';
 
 import '../widgets/status_container_widget.dart';
 import '../widgets/task_container_widget.dart';
 
-class FrontHomePage extends StatefulWidget {
-  const FrontHomePage({Key? key}) : super(key: key);
+class HomePage2 extends StatefulWidget {
+  const HomePage2({Key? key}) : super(key: key);
 
   @override
-  State<FrontHomePage> createState() => _FrontHomePageState();
+  State<HomePage2> createState() => _HomePage2State();
 }
 
-class _FrontHomePageState extends State<FrontHomePage> {
+class _HomePage2State extends State<HomePage2> {
 // Index for the selected segment
 
   @override
@@ -123,7 +125,7 @@ class _FrontHomePageState extends State<FrontHomePage> {
                     itemBuilder: (context, index) {
                       return const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.0), // Adjust horizontal spacing
-                        child: StatusContainerWidget(), // Use your TaskContainer widget
+                        child: HomePage2Widget(), // Use your TaskContainer widget
                       );
                     },
                   ),
@@ -135,7 +137,12 @@ class _FrontHomePageState extends State<FrontHomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => DesignScreen()), // Assuming LoginScreen is the name of your screen
+          );
+        },
         backgroundColor: const Color(0xFFFFFFFF),
         child: const Icon(Icons.add,color: Color(0xFF5A5859) ,
         ),

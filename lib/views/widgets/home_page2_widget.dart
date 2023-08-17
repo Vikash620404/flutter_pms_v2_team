@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StatusContainerWidget extends StatelessWidget {
-  const StatusContainerWidget({super.key});
+class HomePage2Widget extends StatelessWidget {
+  const HomePage2Widget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,19 +22,18 @@ class StatusContainerWidget extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        height: 25,
-                        width: 60,
-                        child: Center(child: Text('20 Days', style: TextStyle(fontWeight: FontWeight.w500))),
-                        decoration: BoxDecoration(
-                          color: Color(0xFFFFFFFF),
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                      ),
-                      SizedBox(height: 10),
                       Text("April milestone1", style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF5A5859))),
                       SizedBox(height: 10),
                       Text('Redesign application', style: TextStyle(color: Color(0xFF5A5859))),
+                      SizedBox(height: 30),
+
+                      Row(
+                        children: [
+                          Image.asset('assets/images/timer.png'),
+                          SizedBox(width: 10,),
+                          Text('Due in 20 days', style: TextStyle(color: Color(0xFF5A5859))),
+                        ],
+                      ),
                     ],
                   ),
                 ),
@@ -60,9 +59,18 @@ class StatusContainerWidget extends StatelessWidget {
                         ],
                       ),
                     ),
+
                     Padding(
-                      padding: const EdgeInsets.only(right: 18.0, top: 10),
-                      child: Text('Running'),
+                      padding: const EdgeInsets.only(right: 18.0, top: 25),
+                      child:Container(
+                        height: 25,
+                        width: 100,
+                        child: Center(child: Text('In progress', style: TextStyle(fontWeight: FontWeight.w500))),
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.circular(13.0),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -86,19 +94,18 @@ class StatusContainerWidget extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        height: 25,
-                        width: 60,
-                        child: Center(child: Text('10 Days', style: TextStyle(fontWeight: FontWeight.w500))),
-                        decoration: BoxDecoration(
-                          color: Color(0xFFFFFFFF),
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
+                      Text("April milestone1", style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF5A5859))),
+                      SizedBox(height: 10),
+                      Text('Redesign application', style: TextStyle(color: Color(0xFF5A5859))),
+                      SizedBox(height: 30),
+
+                      Row(
+                        children: [
+                          Image.asset('assets/images/timer.png'),
+                          SizedBox(width: 10,),
+                          Text('Due in 20 days', style: TextStyle(color: Color(0xFF5A5859))),
+                        ],
                       ),
-                      SizedBox(height: 10),
-                      Text("April milestone2", style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF5A5859))),
-                      SizedBox(height: 10),
-                      Text('Usability testing', style: TextStyle(color: Color(0xFF5A5859))),
                     ],
                   ),
                 ),
@@ -120,13 +127,22 @@ class StatusContainerWidget extends StatelessWidget {
                               strokeWidth: 3,
                             ),
                           ),
-                          Text("1%", style: TextStyle(fontWeight: FontWeight.w500, color: Color(0xFF5A5859))),
+                          Text("0%", style: TextStyle(fontWeight: FontWeight.w500, color: Color(0xFF5A5859))),
                         ],
                       ),
                     ),
+
                     Padding(
-                      padding: const EdgeInsets.only(right: 18.0, top: 10),
-                      child: Text('Upcoming'),
+                      padding: const EdgeInsets.only(right: 18.0, top: 25),
+                      child:Container(
+                        height: 25,
+                        width: 100,
+                        child: Center(child: Text('In progress', style: TextStyle(fontWeight: FontWeight.w500))),
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.circular(13.0),
+                        ),
+                      ),
                     ),
                   ],
                 ),

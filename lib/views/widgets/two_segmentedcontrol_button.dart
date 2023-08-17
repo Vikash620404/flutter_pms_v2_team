@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SegmentedControl extends StatefulWidget {
-  const SegmentedControl({super.key});
+class TwoSegmentedControl extends StatefulWidget {
+  const TwoSegmentedControl({super.key});
 
   @override
-  State<SegmentedControl> createState() => _SegmentedControlState();
+  State<TwoSegmentedControl> createState() => _TwoSegmentedControlState();
 }
 
-class _SegmentedControlState extends State<SegmentedControl> {
+class _TwoSegmentedControlState extends State<TwoSegmentedControl> {
   int _selectedIndex = 0;
 
   @override
@@ -25,7 +25,6 @@ class _SegmentedControlState extends State<SegmentedControl> {
               ),
               child: Row(
                 children: [
-                  _buildButton(0, 'Upcoming'),
                   _buildButton(1, 'In progress'),
                   _buildButton(2, 'Completed'),
                 ],

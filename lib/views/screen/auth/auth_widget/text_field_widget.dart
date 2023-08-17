@@ -1,0 +1,55 @@
+import 'package:flutter/material.dart';
+
+class SingleTextField extends StatelessWidget {
+  final String labelText;
+  final String hintText;
+  final FormFieldValidator<String>? validator;
+  final bool obscureText;
+  final TextEditingController? controller; // Added controller
+
+  const SingleTextField({
+    Key? key,
+    required this.labelText,
+    required this.hintText,
+    this.validator,
+    this.obscureText = false,
+    this.controller, // Added controller parameter
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          labelText,
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 20,
+          ),
+        ),
+        SizedBox(height: 8),
+        TextFormField(
+          controller: controller, // Set the controller
+          validator: validator, // Set the validator
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFFB7B7B7)),
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFFB7B7B7)),
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            hintText: hintText,
+            hintStyle: TextStyle(color: Color(0xFFB7B7B7), fontSize: 18),
+          ),
+          obscureText: obscureText,
+        ),
+      ],
+    );
+  }
+}

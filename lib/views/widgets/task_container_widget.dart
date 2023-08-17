@@ -78,7 +78,9 @@ class _TaskContainerState extends State<TaskContainer> {
                   padding: const EdgeInsets.only(top: 15.0,left: 23),
                   child: Row(
                     children: [
-                      ToggleableCheckBox(),
+                      ToggleableCheckBox(
+                          borderColor: Colors.white
+                      ),
                       SizedBox(width: 10,),
                       Text("26/60 completed",style: TextStyle(fontWeight: FontWeight.w400,fontSize: 15,color: Color(0xFFFFFFFF)),),
                     ],
@@ -145,7 +147,9 @@ class _TaskContainerState extends State<TaskContainer> {
                   padding: const EdgeInsets.only(top: 15.0,left: 23),
                   child: Row(
                     children: [
-                      ToggleableCheckBox(),
+                      ToggleableCheckBox(
+                          borderColor: Colors.white
+                      ),
                       SizedBox(width: 10,),
                       Text("6/6 completed",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15,color: Color(0xFF5A5859)),),
                     ],
@@ -215,7 +219,9 @@ class _TaskContainerState extends State<TaskContainer> {
                   padding: const EdgeInsets.only(top: 15.0,left: 23),
                   child: Row(
                     children: [
-                      ToggleableCheckBox(),
+                      ToggleableCheckBox(
+                          borderColor: Colors.white
+                      ),
                       SizedBox(width: 10,),
                       Text("6/6 completed",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15,color: Color(0xFF5A5859)),),
                     ],

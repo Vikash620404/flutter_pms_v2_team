@@ -1,37 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pms_v2_team/views/widgets/segmented_control%20button.dart';
+import 'package:flutter_pms_v2_team/views/widgets/design_container_widget.dart';
+import 'package:flutter_pms_v2_team/views/widgets/review_widget.dart';
 
-import '../widgets/status_container_widget.dart';
-import '../widgets/task_container_widget.dart';
+import '../widgets/segmented_control button.dart';
+import '../widgets/status_container_widget.dart'; // Make sure to import the correct file path for your SegmentedControlButton
 
-class FrontHomePage extends StatefulWidget {
-  const FrontHomePage({Key? key}) : super(key: key);
+class ReviewScreen extends StatefulWidget {
+  const ReviewScreen({super.key});
 
   @override
-  State<FrontHomePage> createState() => _FrontHomePageState();
+  State<ReviewScreen> createState() => _ReviewScreenState();
 }
 
-class _FrontHomePageState extends State<FrontHomePage> {
-// Index for the selected segment
+class _ReviewScreenState extends State<ReviewScreen> {
+  String selectedValue = 'version 1';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFFFFFF),
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
+
           child: Column(
             children: [
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
-
                   children: [
                     Container(
                       height: 100,
                       width: 60,
-
                       child: SizedBox(
                         height: 15,
                         width: 15,
@@ -68,7 +67,6 @@ class _FrontHomePageState extends State<FrontHomePage> {
                       child: Container(
                         height: 30,
                         width: 30,
-
                         child: Transform.scale(
                             scale: 1.2,
                             child: Image.asset('assets/images/cartoonIcon.png')),
@@ -77,43 +75,55 @@ class _FrontHomePageState extends State<FrontHomePage> {
                   ],
                 ),
               ),
-              const SizedBox(height: 20),
-              // Add the segmented control here
-
-              const SegmentedControl(),
-
-              const SizedBox(height: 25,),
-
-              Padding(
-                padding: const EdgeInsets.only(left: 13.0),
-                child: SizedBox(
-                  height: 175,
-                  // width: 200,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 1, // Replace with the actual number of items
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0), // Adjust horizontal spacing
-                        child: TaskContainer(), // Use your TaskContainer widget
-                      );
-                    },
+              SegmentedControl(),
+              SizedBox(height: 35,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 22.0),
+                    child: Text('In Review',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),),
                   ),
-                ),
-              ),
-              const SizedBox(height: 20,),
-              const Align(
-                  alignment: Alignment.centerLeft,
+                  Padding(
+                    padding: const EdgeInsets.only(right: 21.0),
+                    child: Container(
+                      height: 35,
+                      width: 100, // Adjust the width as needed
+                      decoration: BoxDecoration(
+                        color: Color(0xFFE6E6E6),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Row(
+                        children: [
 
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 25.0),
-                    child: Text("Work Status",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
-                  )),
+                          Spacer(), // Spacer widget takes up available space between text and button
+                          DropdownButton<String>(
+                            value: selectedValue, // Set the selected value here
+                            items: <String>['version 1', 'version 2', 'version 3'].map((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                            onChanged: (String? newValue) {
+                              if (newValue != null) {
+                                setState(() {
+                                  selectedValue = newValue; // Update the selected value
+                                });
+                              }
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(height: 20,),
               Padding(
                 padding: const EdgeInsets.only(left: 13.0,right: 13.0),
                 child: SizedBox(
-                  height: 350,
+                  height: 650,
                   //  width: 800,
                   child: ListView.builder(
                     shrinkWrap: true,
@@ -123,7 +133,7 @@ class _FrontHomePageState extends State<FrontHomePage> {
                     itemBuilder: (context, index) {
                       return const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.0), // Adjust horizontal spacing
-                        child: StatusContainerWidget(), // Use your TaskContainer widget
+                        child: ReviewWidget(), // Use your TaskContainer widget
                       );
                     },
                   ),
@@ -189,8 +199,6 @@ class _FrontHomePageState extends State<FrontHomePage> {
           ],
         ),
       ),
-
-
     );
   }
 }
