@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+
+const Color titleTextColor = Color(0xB3595454);
+const subTitleTextColor = Color(0xFF595454);
+const inProgressBoxColor = Color(0x0000001A);
+const containerBorderColor = Color(0xFFE9E8E8);
+const containerColor = Color(0xFFF6F6F6);
+const whiteColor = Color(0xFFFFFFFF);
+const blackColor = Color(0xFF000000);
+const segmentedBoxColor = Color(0xFFB7B7B7);
+const redColor = Colors.red;
+const boxErrorColor = Color(0xFFFBB1B1);
+const containerColor2 = Color(0xFFEEEEEE);
+const taskContainerColor = Color(0xFFF9F9F9);
+const taskBorderContainerColor = Color(0xFFDFDCDC);
+const taskTextColor = Color(0xFF6E6A7C);
+const taskTextColor2 = Color(0xFF24252C);
+const boxShadowColor = Color(0x00000040);
+const popupBorderColor = Color(0xFFB5B5B5);
+const Color checkedBoxCheckedColor = Color(0xFF7C7C7D);
+const Color listTileBorderColor = Color(0xFFE0E0E0);

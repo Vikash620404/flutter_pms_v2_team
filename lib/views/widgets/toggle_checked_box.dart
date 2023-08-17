@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'const_color.dart';
+
 class ToggleableCheckBox extends StatefulWidget {
+  final Color borderColor; // Add this line to define the parameter
+
+  ToggleableCheckBox({required this.borderColor}); // Add this constructor
+
   @override
   _ToggleableCheckBoxState createState() => _ToggleableCheckBoxState();
 }
@@ -17,18 +23,19 @@ class _ToggleableCheckBoxState extends State<ToggleableCheckBox> {
         });
       },
       child: Container(
-        height: 15,
-        width: 15,
+        height: 20,
+        width: 20,
         decoration: BoxDecoration(
-          color: _isChecked ? Colors.white : Color(0xFFFFFFFF),
+          color: _isChecked ? AppColors.whitecolor : const Color(0xFFFFFFFF),
+          border: Border.all(color: widget.borderColor), // Use the borderColor parameter here
           borderRadius: BorderRadius.circular(3.0),
         ),
         child: _isChecked
-            ? Center(
+            ? const Center(
           child: Icon(
             Icons.check,
             color: Colors.black,
-            size: 17.0,
+            size: 20.0,
           ),
         )
             : null,
