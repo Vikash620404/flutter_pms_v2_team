@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pms_v2_team/views/screen/profile_screen/team_member_details.dart';
-import 'package:flutter_pms_v2_team/views/screen/profile_screen/team_role_page.dart';
+import 'package:flutter_pms_v2_team/views/screen/profile_screen/team_role_screen.dart';
 import 'package:flutter_pms_v2_team/views/screen/profile_screen/widget/custom_list_development_team.dart';
 import 'package:flutter_pms_v2_team/views/screen/profile_screen/widget/develop_team_widget.dart';
 

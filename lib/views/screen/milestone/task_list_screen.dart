@@ -19,7 +19,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
   void _navigateToTaskDetailScreen() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => TaskDetailsScreen()), // Navigate to TaskDetailScreen
+      MaterialPageRoute(builder: (context) => const TaskDetailsScreen()), // Navigate to TaskDetailScreen
     );
   }
 

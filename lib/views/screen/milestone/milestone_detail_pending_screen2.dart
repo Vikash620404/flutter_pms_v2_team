@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pms_v2_team/views/screen/milestone/milestone_list_screen.dart';
+import 'package:flutter_pms_v2_team/views/screen/milestone/task_list_screen.dart';
 import 'package:flutter_pms_v2_team/views/screen/milestone/widget/detail_container_widget.dart';
 import 'package:flutter_pms_v2_team/views/screen/project_screen/widget/new_container%20widget.dart';
 import 'package:flutter_pms_v2_team/views/screen/project_screen/widget/project_info_widget.dart';

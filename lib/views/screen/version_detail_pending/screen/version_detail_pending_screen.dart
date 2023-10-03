@@ -116,7 +116,7 @@ class _VersionDetailPendingScreenState extends State<VersionDetailPendingScreen>
               ProjectInfoWidget(),
 
               const Padding(
-                padding: EdgeInsets.only(left: 20.0,right: 20),
+                padding: EdgeInsets.only(left: 20.0,right: 20,bottom: 20),
                 child: AllProjectContainerWidget2(text: 'xnbbvhgvhcgcgcgfcgcgfcgfc uyg jhghgg jhgjvvjhvbhjv bsd jbdsbf jhbfjhbfsbf dnmnds bbsdnk jsbjsbj jdfjsdf kjsdbfjksf kbfkjbsjf khdjfgaee jhlshdiulahfiu kjhfjkhewi kiuhdiu bjb', max: 0.5,),
               ),
 

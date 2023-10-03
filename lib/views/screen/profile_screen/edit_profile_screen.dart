@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pms_v2_team/views/screen/profile_screen/profile_screen1.dart';
-import 'package:flutter_pms_v2_team/views/screen/profile_screen/team_role_page.dart';
+import 'package:flutter_pms_v2_team/views/screen/profile_screen/team_role_screen.dart';
 import 'package:flutter_pms_v2_team/views/screen/profile_screen/widget/text_field_widget.dart';
 import 'package:intl/intl.dart';
 

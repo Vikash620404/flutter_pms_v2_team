@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../team_role_page.dart';
+import '../team_role_screen.dart';
 
 class ElevationButtonProfileInfo extends StatelessWidget {
   final String text1;

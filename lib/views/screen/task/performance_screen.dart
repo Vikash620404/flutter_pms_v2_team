@@ -101,7 +101,7 @@ class _PerformanceScreenState extends State<PerformanceScreen> {
                           width: 1.0, // Set the border width
                         ),
                       ),
-                      child: const Row(
+                      child: Row(
                         children: [
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 8.0), // Add some padding to the left
@@ -135,7 +135,7 @@ class _PerformanceScreenState extends State<PerformanceScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => TaskCompletedScreen(),
+                        builder: (context) => const TaskCompletedScreen(),
                       ),
                     );
                   },
